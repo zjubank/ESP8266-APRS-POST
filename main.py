@@ -10,7 +10,11 @@ while 1:
 	cmd = name+">APRS,TCPIP*:="+pos+"-ESP8266Python"
 	login = "user "+name+" pass "+passwd+" vers ESP8266Python 1.0 filter m/2000\r\n"
 	s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-	s.connect((HOST, PORT))
+	try:
+		s.connect((HOST, PORT))
+	except OSError:
+		print("OSError, check the Internet connection")
+		continue
 	s.send(login+cmd+"\r\n")
 	data = s.recv(1024)
 	print(data)
