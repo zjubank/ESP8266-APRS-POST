@@ -8,9 +8,11 @@ Input format:
 ```
 
 ## Symbol
-- | House
-> | car
-r | station
+| Transmitted symbol character | Displayed primary symbols |
+| --- | --- |
+| \- | House |
+| \> | car |
+| r | station |
 
 ...
 
