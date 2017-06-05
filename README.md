@@ -4,5 +4,13 @@ The project use `hangzhou.aprs2.net`
 
 Input format:
 ```
-user passwd GPRS
+<user> <passwd> <GPRS><Symbol>
 ```
+
+## Symbol
+- | House
+> | car
+r | station
+
+...
+
